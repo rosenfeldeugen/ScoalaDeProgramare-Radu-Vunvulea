@@ -2,6 +2,7 @@
 
 namespace HolidayPlanner.Requests
 {
+    //CR: This is a request for a new employee?
     public class NewEmployeeHolidayRequest : HolidayRequest
     {
         public NewEmployeeHolidayRequest(Email email, IConnectorResolver connectorResolver)
@@ -23,12 +24,14 @@ namespace HolidayPlanner.Requests
         public void Approve()
         {
             Email emailToHR = ConvertRequestToEmailForHR();
+            //CR: why not emailToHR.Send()?
             SendEmail(emailToHR);
         }
 
         public void Reject()
         {
             Email emailToEmployee = ConvertRejectRequestToEmailForEmployee();
+            //CR: why not emailToEmployee.Send()?
             SendEmail(emailToEmployee);
         }
 

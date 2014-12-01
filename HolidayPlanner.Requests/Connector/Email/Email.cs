@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-
+//CR: Bad namespace
 namespace HolidayPlanner.Requests
 {
     public class Email

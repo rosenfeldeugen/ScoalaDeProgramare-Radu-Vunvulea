@@ -1,5 +1,6 @@
 ﻿namespace HolidayPlanner.Requests
 {
+    //CR: What's happened after executing SubmitRequest? The instance will become SubmitedHolidayRequest? ;)
     public class UnsubmitedHolidayRequest : HolidayRequest
     {
         public UnsubmitedHolidayRequest(IConnectorResolver connectorResolver) 

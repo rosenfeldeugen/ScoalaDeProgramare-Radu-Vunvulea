@@ -23,6 +23,8 @@ namespace HolidayPlanner.Requests
 
         protected void SendEmail(Email email)
         {
+            //CR: why not email.Send()?
+            //CR: In this way you remove the dependency on  IConnectorResolver
             IConnector<Email> emailConnector = connectorResolver.Resolve<Email>();
             emailConnector.Send(email);
         }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace HolidayPlanner.Requests
 {
+    //CR: not really needed. We have to send an email. 
+    //CR: This class is an assumption
     public class ConnectorResolver : IConnectorResolver
     {
         private readonly Dictionary<Type, Func<object>> connectorMapping;
